@@ -6,17 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_favorite.*
 import ru.mrrobot1413.lesson8homework.R
-import ru.mrrobot1413.lesson8homework.adapters.FavoriteAdapter
-import ru.mrrobot1413.lesson8homework.data.DataStorage
-import ru.mrrobot1413.lesson8homework.interfaces.FragmentsClickListener
+import ru.mrrobot1413.lesson8homework.adapters.FavoriteListAdapter
+import ru.mrrobot1413.lesson8homework.interfaces.MovieClickListener
+import ru.mrrobot1413.lesson8homework.viewModels.FavoriteListViewModel
 
 class FavoriteListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var noMoviesSign: TextView
+    private val adapter by lazy {
+        FavoriteListAdapter(noMoviesSign) {
+            (activity as? MovieClickListener)?.onClick(it)
+        }
+    }
+    private val favoriteListViewModel by lazy {
+        ViewModelProvider(this).get(FavoriteListViewModel::class.java)
+    }
 
     companion object {
 
@@ -42,6 +52,17 @@ class FavoriteListFragment : Fragment() {
 
         initFields(view)
         initRecycler()
+        favoriteListViewModel.getMovies().observe(viewLifecycleOwner, {
+            adapter.setMovies(it)
+        })
+
+        relative.setOnRefreshListener {
+            favoriteListViewModel.getMovies().observe(viewLifecycleOwner, {
+                adapter.setMovies(it)
+                noMoviesSign.visibility = View.VISIBLE
+            })
+            relative.isRefreshing = false
+        }
     }
 
     private fun initFields(view: View) {
@@ -52,8 +73,7 @@ class FavoriteListFragment : Fragment() {
 
     private fun initRecycler() {
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = FavoriteAdapter(DataStorage.favoriteList, noMoviesSign) {
-            (activity as? FragmentsClickListener)?.onClick(it)
-        }
+
+        recyclerView.adapter = adapter
     }
 }

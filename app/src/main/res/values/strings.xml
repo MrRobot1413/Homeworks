@@ -1,113 +1,9 @@
 <resources>
-    <string name="app_name">Lesson 3 homework</string>
+    <string name="app_name">Top Movies</string>
     <string name="movies">Movies</string>
     <string name="details">Details</string>
-    <string name="movie_1_name">Tenet (2020)</string>
-    <string name="movie_1_time">2h 30m</string>
-    <string name="movie_2_name">The hunt (2020)</string>
-    <string name="movie_2_time">1h 55m</string>
-    <string name="movie_3_name">Soul (2020)</string>
-    <string name="movie_3_time">1h 47m</string>
-    <string name="movie_4_name">Wonder Woman 1984 (2020)</string>
-    <string name="movie_4_time">2h 35m</string>
-    <string name="movie_5_name">Unknown (2006)</string>
-    <string name="movie_5_time">1h 25m</string>
-    <string name="movie_1_descr">Fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.</string>
-    <string name="movie_2_descr">Twelve strangers awake in clearing with no memory of how or why are they are there, but its not long before they realise that they are being hunted down. One of the hunted (Gilpin) manages to turn the tables on their pursuers and attempts to make her way to the mysterious woman behind it all.</string>
-    <string name="movie_3_descr">Determined to return to his life, Joe teams up with a precocious soul, 22, who has never understood the appeal of the human experience.</string>
-    <string name="movie_4_descr">An influential and successful businessman, the Lord dreams of becoming a god among mortals. For this, he spares no expense and collects a variety of magical artifacts from all over the world, trying to find one that can give him boundless strength and power. In his search, he is assisted by a specialist in ancient history, Dr. Barbara Ann Minerva.</string>
-    <string name="movie_5_descr">Five men wake up in a locked-down warehouse with no memory of who they are. They are forced to figure out who is good and who is bad to stay alive.</string>
-    <string name="movie_1_invite">Invite you to watch the movie "Tenet"!</string>
-    <string name="movie_2_invite">Invite you to watch the movie "The hunt"!</string>
-    <string name="movie_3_invite">Invite you to watch the movie "Soul"!</string>
-    <string name="movie_4_invite">Invite you to watch the movie "Wonder Woman 1984"!</string>
-    <string name="movie_5_invite">Invite you to watch the movie "Unknown"!</string>
     <string name="favorite">Favorite</string>
     <string name="add_to_favorite">Add to favorite</string>
-    <string name="actors">Actors</string>
-    <string name="movie_1_actors">
-            Juhan Ulfsak (Passenger),
-            Jefferson Hall	(Well-Dressed Man),
-            Ivo Uukkivi (Uniformed Official),
-            Andrew Howard (Driver),
-            John David Washington (Protagonist),
-            Rich Ceraulo Ko (SWAT / Target),
-            Jonathan Camp (SWAT 2),
-            Chatham (SWAT 3),
-	        Sander Rebane (Ukrainian SWAT),
-	        Martin Donovan	(Fay),
-	        Clémence Poésy (Barbara),
-	        Josh Stewart (Male Voice (voice)),
-	        Robert Pattinson (Neil),
-	        Dimple Kapadia	(Priya),
-	        Denzil Smith (Sanjay)</string>
-    <string name="movie_2_actors">
-            Betty Gilpin (Crystal),
-            Hilary Swank (Athena),
-            Ike Barinholtz (Staten Island),
-            Wayne Duvall (Don),
-            Ethan Suplee ((Shut the F*** Up) Gary)),
-            Emma Roberts (Yoga Pants),
-            Christopher Berry (Target (as Chris Berry)),
-            Sturgill Simpson (Vanilla Nice),
-            Kate Nowlin (Big Red),
-            Amy Madigan (Ma),
-            Reed Birney (Pop),
-            Glenn Howerton (Richard),
-            Steve Coulter (The Doctor),
-            Dean J. West (Martin (as Dean West)),
-            Vince Pisani (Peter)
-    </string>
-    <string name="movie_3_actors">
-        Jamie Foxx (Joe (voice),
-        Tina Fey (22 (voice))
-        Graham Norton Moonwind (voice)
-        Rachel House (Terry (voice))
-        Alice Braga	(Counselor Jerry (voice))
-        Richard Ayoade (Counselor Jerry (voice))
-        Phylicia Rashad (Libba (voice))
-        Donnell Rawlings (Dez (voice))
-        Questlove (Curley (voice))
-        Angela Bassett (Dorothea (voice))
-        Cora Champommier (Connie (voice))
-        Margo Hall (Melba (voice))
-        Daveed Diggs (Paul (voice))
-        Rhodessa Jones (Lulu (voice))
-        Wes Studi (Counselor Jerry (voice))
-    </string>
-    <string name="movie_4_actors">
-        Gal Gadot (Diana Prince - Wonder Woman)
-        Chris Pine (Steve Trevor)
-        Kristen Wiig (Barbara Ann Minerva - Cheetah)
-        Pedro Pascal (Maxwell Lord)
-        Robin Wright (General Antiope)
-        Connie Nielsen (Queen Hippolyta)
-        Lilly Aspell (young Diana)
-        Lucian Perez (Alistair Lord son of Max)
-        Kristoffer Polaha (the man in whose body Steve lives)
-        Oliver Cotton (Simon Stagg Max\'s investor)
-        Amr Waked (Emir Said bin Abydos ruler of Bialia)
-        Stuart Milligan (President of the United States)
-        Ravi Patel (Babajide)
-        Natasha Rothwell (Carols boss Barbara)
-        Calvin Yu (Jake is Barbara\'s colleague)
-        Gabriella Wilde (Raquel Max\'s assistant)
-        Lynda Carter (Asteria (cameo))
-    </string>
-    <string name="movie_5_actors">
-        James Caviezel (Mitch, main character)
-        Greg Kinnear (Richard McCain guy with a broken nose, businessman),
-        Bridget Moynahan (Eliza Coles, William\'s wife),
-        Joe Pantoliano (Brockman, tied guy)
-        Barry Pepper (William Coles, one of the businessmen),
-        Jeremy Sisto (Bobby Kincaid, handcuffed)
-        Peter Stormare (Stefan Burian, leader of the criminal gang)
-    </string>
-    <string name="movie_1_rating">7.6</string>
-    <string name="movie_2_rating">6.6</string>
-    <string name="movie_3_rating">8.0</string>
-    <string name="movie_4_rating">5.4</string>
-    <string name="movie_5_rating">6.7</string>
     <string name="no_movies_sign">There aren\'t any movies yet</string>
     <string name="exit_text">Are you sure you want to exit?</string>
     <string name="confirm_exit">Exit</string>
@@ -116,4 +12,8 @@
     <string name="toast_delete"> was deleted from favorite</string>
     <string name="toast_add"> was added to favorite</string>
     <string name="undo">Undo</string>
+    <string name="time">Time:</string>
+    <string name="release_date">Release date:</string>
+    <string name="age_restrictions">Age restrictions:</string>
+    <string name="country">Country:</string>
 </resources>

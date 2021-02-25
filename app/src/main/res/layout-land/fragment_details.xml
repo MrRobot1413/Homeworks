@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="370dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -21,15 +21,15 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/movie_1_name">
+            tools:title="@string/movie_1_name"
+            app:expandedTitleTextAppearance="@style/ToolbarTextStyle">
 
             <ImageView
                 android:id="@+id/image_backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/movie_1_image"
+                android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -40,78 +40,83 @@
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
                 app:popupTheme="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_to_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_favorite_border"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_anchorGravity="bottom|end"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:contentDescription="@string/favorite" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/itemColor"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txt_rating"
+            <RelativeLayout
+                android:id="@+id/description"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/collapsing_toolbar_layout"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="2dp"
-                android:layout_toEndOf="@id/image_star"
-                android:fontFamily="@font/basic"
-                android:text="@string/movie_1_rating"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:ignore="NotSibling" />
+                android:layout_height="74dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="0dp">
 
-            <ImageView
-                android:id="@+id/image_star"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/collapsing_toolbar_layout"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="2dp"
-                app:srcCompat="@drawable/ic_baseline_star_24"
-                tools:ignore="NotSibling" />
+                <TextView
+                    android:id="@+id/txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/collapsing_toolbar_layout"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/image_star"
+                    android:fontFamily="@font/basic"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:ignore="NotSibling" />
+
+                <ImageView
+                    android:id="@+id/image_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/collapsing_toolbar_layout"
+                    android:layout_marginTop="2dp"
+                    app:srcCompat="@drawable/ic_baseline_star_24"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_rating"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/allerta"
+                    android:text="@string/release_date"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:ignore="NotSibling" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/txt_descr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/description"
+                android:fontFamily="@font/allerta"
                 android:padding="10dp"
-                android:text="@string/movie_1_descr"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                tools:ignore="NotSibling" />
-
-            <TextView
-                android:id="@+id/txt_actors_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txt_descr"
-                android:fontFamily="@font/basic"
-                android:padding="10dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/actors"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:ignore="NotSibling" />
-
-            <TextView
-                android:id="@+id/txt_actors"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txt_actors_header"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/movie_1_actors"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="NotSibling" />

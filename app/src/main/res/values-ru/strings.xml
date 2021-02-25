@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lesson 3 homework</string>
+    <string name="app_name">Top Movies</string>
     <string name="movies">Фильмы</string>
     <string name="details">Подробности</string>
     <string name="movie_1_name">Довод (2020)</string>
@@ -56,37 +56,37 @@
     </string>
     <string name="movie_3_actors">
         Джейми Фокс (Джо (голос),
-        Тина Фей (22 (голос))
-        Грэм Нортон (Moonwind (голос))
-        Рэйчел Хаус (Терри (голос))
-        Элис Брага (Ричард Айоаде (голос))
-        Филисия Рашад (Либба (голос))
-        Доннел Роулингс (Дез (голос))
-        Куестлов (Кёрли (голос))
-        Анжелла Бассетт (Доротея (голос))
-        Кора Чампомир (Кёгги (голос))
-        Марго Халл (Мелба (голос))
-        Давид Дигс (Пауль (голос))
-        Родесса Джонс (Лулу (голос))
+        Тина Фей (22 (голос)),
+        Грэм Нортон (Moonwind (голос)),
+        Рэйчел Хаус (Терри (голос)),
+        Элис Брага (Ричард Айоаде (голос)),
+        Филисия Рашад (Либба (голос)),
+        Доннел Роулингс (Дез (голос)),
+        Куестлов (Кёрли (голос)),
+        Анжелла Бассетт (Доротея (голос)),
+        Кора Чампомир (Кёгги (голос)),
+        Марго Халл (Мелба (голос)),
+        Давид Дигс (Пауль (голос)),
+        Родесса Джонс (Лулу (голос)),
         Вес Студи (Советник Джерри (голос))
     </string>
     <string name="movie_4_actors">
-        Галь Гадот	(Диана Принс / Чудо-женщина)
-        Крис Пайн (Стив Тревор)
-        Кристен Уиг	(Барбара Энн Минерва / Гепарда)
-        Педро Паскаль (Максвелл Лорд)
-        Робин Райт (генерал Антиопа)
-        Конни Нильсен (королева Ипполита)
-        Лилли Аспелл (юная Диана)
-        Лучиан Перес (Алистер Лорд сын Макса)
-        Кристоффер Полаха (человек, в теле которого обитает Стив)
-        Оливер Коттон (Саймон Стэгг инвестор Макса)
-        Амр Вакед (Эмир Саид бин Абидос правитель Биалии)
-        Стюарт Миллиган	(Президент США)
-        Рави Патель	(Бабаджиде)
-        Наташа Ротуэлл (Кэрол босс Барбары)
-        Келвин Ю (Джейк коллега Барбары)
-        Габриэлла Уайлд	(Ракель помощница Макса)
+        Галь Гадот	(Диана Принс / Чудо-женщина),
+        Крис Пайн (Стив Тревор),
+        Кристен Уиг	(Барбара Энн Минерва / Гепарда),
+        Педро Паскаль (Максвелл Лорд),
+        Робин Райт (генерал Антиопа),
+        Конни Нильсен (королева Ипполита),
+        Лилли Аспелл (юная Диана),
+        Лучиан Перес (Алистер Лорд сын Макса),
+        Кристоффер Полаха (человек, в теле которого обитает Стив),
+        Оливер Коттон (Саймон Стэгг инвестор Макса),
+        Амр Вакед (Эмир Саид бин Абидос правитель Биалии),
+        Стюарт Миллиган	(Президент США),
+        Рави Патель	(Бабаджиде),
+        Наташа Ротуэлл (Кэрол босс Барбары),
+        Келвин Ю (Джейк коллега Барбары),
+        Габриэлла Уайлд	(Ракель помощница Макса),
         Линда Картер (Астерия (камео))
     </string>
     <string name="movie_5_actors">
@@ -98,11 +98,26 @@
         Джереми Систо (Бобби Кинкейд, прикованный наручниками),
         Петер Стормаре (Стефан Буриан, главарь банды преступников)
     </string>
-    <string name="movie_1_rating">3.8/5.0</string>
-    <string name="movie_2_rating">3.3/5.0</string>
-    <string name="movie_3_rating">4.0/5.0</string>
-    <string name="movie_4_rating">2.7/5.0</string>
-    <string name="movie_5_rating">3.3/5.0</string>
+    <string name="movie_1_rating">7.6</string>
+    <string name="movie_2_rating">6.6</string>
+    <string name="movie_3_rating">8.0</string>
+    <string name="movie_4_rating">5.4</string>
+    <string name="movie_5_rating">6.7</string>
+    <string name="movie_1_release_date">12 Августа 2020</string>
+    <string name="movie_2_release_date">11 Марта 2020</string>
+    <string name="movie_3_release_date">25 Декабря 2020</string>
+    <string name="movie_4_release_date">16 Декабря 2020</string>
+    <string name="movie_5_release_date">3 Ноября 2006</string>
+    <string name="movie_1_country">США</string>
+    <string name="movie_2_country">Англия</string>
+    <string name="movie_3_country">США</string>
+    <string name="movie_4_country">США</string>
+    <string name="movie_5_country">США</string>
+    <string name="movie_1_restriction">2+</string>
+    <string name="movie_2_restriction">18+</string>
+    <string name="movie_3_restriction">12+</string>
+    <string name="movie_4_restriction">16+</string>
+    <string name="movie_5_restriction">18+</string>
     <string name="no_movies_sign">Ничего не добавлено в избранное</string>
     <string name="exit_text">Вы уверены что хотите выйти?</string>
     <string name="confirm_exit">Выйти</string>
@@ -111,4 +126,8 @@
     <string name="toast_delete"> был удалён из избранного</string>
     <string name="toast_add"> был добавлен в избранное</string>
     <string name="undo">Отмена</string>
+    <string name="time">Время:</string>
+    <string name="release_date">Дата выхода:</string>
+    <string name="age_restrictions">Ограничения:</string>
+    <string name="country">Страна:</string>
 </resources>
