@@ -19,7 +19,7 @@ class FavoriteListFragment : Fragment() {
     private lateinit var noMoviesSign: TextView
 
     companion object {
-
+        //todo переписать под получение данных из ViewModel
         fun newInstance(): FavoriteListFragment {
             val args = Bundle()
 
@@ -29,7 +29,7 @@ class FavoriteListFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
+    override fun onCreateView(//todo переписать под конструктор
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,14 +44,14 @@ class FavoriteListFragment : Fragment() {
         initRecycler()
     }
 
-    private fun initFields(view: View) {
+    private fun initFields(view: View) {//todo избыточный метод
         noMoviesSign = view.findViewById(R.id.txt_no_movie)
         noMoviesSign.visibility = View.VISIBLE
         recyclerView = view.findViewById(R.id.recycler_view)
     }
 
-    private fun initRecycler() {
-        recyclerView.layoutManager = LinearLayoutManager(context)
+    private fun initRecycler() {//todo избыточный метод
+        recyclerView.layoutManager = LinearLayoutManager(context)//todo вынести в разметку
         recyclerView.adapter = FavoriteAdapter(DataStorage.favoriteList, noMoviesSign) {
             (activity as? FragmentsClickListener)?.onClick(it)
         }

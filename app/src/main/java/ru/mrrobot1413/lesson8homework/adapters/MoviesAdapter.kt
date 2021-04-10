@@ -9,7 +9,6 @@ import ru.mrrobot1413.lesson8homework.data.DataStorage
 import ru.mrrobot1413.lesson8homework.model.Movie
 import ru.mrrobot1413.lesson8homework.viewHolders.MoviesViewHolder
 
-
 class MoviesAdapter(
     private val moviesList: List<Movie>,
     private val clickListener: (movie: Movie) -> Unit
@@ -25,7 +24,7 @@ class MoviesAdapter(
     }
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-
+        //todo можно вынести получение элемента, и потом его передать, а не брать каждый раз из List
         holder.bind(moviesList[position])
         setOnDetailsClickListener(holder, moviesList[position])
         setOnLikeListener(holder, moviesList[position])
@@ -41,6 +40,7 @@ class MoviesAdapter(
         }
     }
 
+
     private fun setOnLikeListener(
         holder: MoviesViewHolder,
         movie: Movie
@@ -48,9 +48,9 @@ class MoviesAdapter(
         holder.addToFavorToggle.isChecked = movie.liked
         holder.addToFavorToggle.setOnClickListener {
             if (movie.liked) {
-                movie.liked = false
+                movie.liked = false//todo убрать дублирование
                 DataStorage.favoriteList.remove(movie)
-                notifyDataSetChanged()
+                notifyDataSetChanged()//todo убрать дублирование
             } else {
                 movie.liked = true
                 DataStorage.favoriteList.add(movie)
@@ -58,6 +58,7 @@ class MoviesAdapter(
 
                 val context = holder.itemView.context
 
+                //todo вынести отображение в Activity
                 Snackbar.make(holder.itemView, "${context.getString(R.string.toast)} '${context.getString(movie.movieName)}' ${
                     context.getString(
                         R.string.toast_add

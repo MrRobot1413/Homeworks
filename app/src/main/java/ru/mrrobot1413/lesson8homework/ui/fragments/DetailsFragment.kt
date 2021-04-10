@@ -22,14 +22,14 @@ class DetailsFragment : Fragment() {
     private lateinit var txtActors: TextView
     private lateinit var txtDescr: TextView
     private lateinit var txtRating: TextView
-    private lateinit var inviteText: String
+    private lateinit var inviteText: String //todo лишнее поле
     private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
     private lateinit var toolbar: MaterialToolbar
 
     companion object {
 
         private const val MOVIE = "movie"
-
+        //todo получать данные из ViewModel
         fun newInstance(movie: Movie): DetailsFragment {
             val args = Bundle()
             args.putParcelable(MOVIE, movie)
@@ -46,7 +46,7 @@ class DetailsFragment : Fragment() {
         setHasOptionsMenu(true)
     }
 
-    override fun onCreateView(
+    override fun onCreateView(//todo переписать под конструктор
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -61,7 +61,7 @@ class DetailsFragment : Fragment() {
         val movie = arguments?.getParcelable<Movie>(MOVIE)
 
         initFields(view)
-        movie?.let { setContent(it) }
+        movie?.let { setContent(it) } //todo избыточная проверка (должна быть во ViewModel)
 
         (activity as MainActivity?)!!.setSupportActionBar(toolbar)
 
@@ -79,7 +79,7 @@ class DetailsFragment : Fragment() {
         if (item.itemId == R.id.invite_friend) {
             val sendIntent = Intent()
             sendIntent.action = Intent.ACTION_SEND
-            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "The movie ${collapsingToolbarLayout.title}")
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "The movie ${collapsingToolbarLayout.title}")//todo брать не из заголовка, а из сущности
             sendIntent.putExtra(Intent.EXTRA_TEXT, inviteText)
             sendIntent.type = "text/plain"
             startActivity(sendIntent)
@@ -87,7 +87,7 @@ class DetailsFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun initFields(view: View) {
+    private fun initFields(view: View) {//todo переписать под синтетику
         toolbar = view.findViewById(R.id.toolbar)
         imageBackdrop = view.findViewById(R.id.image_backdrop)
         txtDescr = view.findViewById(R.id.txt_descr)
@@ -96,7 +96,7 @@ class DetailsFragment : Fragment() {
         collapsingToolbarLayout = view.findViewById(R.id.collapsing_toolbar_layout)
     }
 
-    private fun setContent(movie: Movie) {
+    private fun setContent(movie: Movie) {//todo избыточный метод
         imageBackdrop.setImageDrawable(ContextCompat.getDrawable(context!!, movie.movieImage))
 
         val movieName = getText(movie.movieName)

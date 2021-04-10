@@ -19,7 +19,7 @@ import ru.mrrobot1413.lesson8homework.ui.fragments.FavoriteListFragment
 
 
 class MainActivity : AppCompatActivity(), FragmentsClickListener {
-
+    //todo использовать syntetic
     private lateinit var recyclerView: RecyclerView
     private val moviesList = DataStorage.moviesList
     private lateinit var adapter: MoviesAdapter

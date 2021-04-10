@@ -55,10 +55,10 @@ class FavoriteAdapter(
             showNoMoviesSign()
 
             notifyItemRemoved(position)
-            notifyItemChanged(position)
+            notifyItemChanged(position)//todo избыточно
 
             val context = holder.itemView.context
-
+            //todo вынести из адаптера (это дублирующийся код)
             Snackbar.make(holder.itemView, "${context.getString(R.string.toast)} '${context.getString(movie.movieName)}' ${
                 context.getString(
                     R.string.toast_delete
@@ -73,7 +73,7 @@ class FavoriteAdapter(
         }
     }
 
-    private fun showNoMoviesSign(){
+    private fun showNoMoviesSign(){//todo выполняется во ViewModel, а не в адаптере
         if(DataStorage.favoriteList.isEmpty()){
             noMoviesSign.visibility = View.VISIBLE
         } else{
