@@ -67,7 +67,6 @@ class DetailsFragment : Fragment() {
         (activity as MovieClickListener).hideBottomNav()
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
